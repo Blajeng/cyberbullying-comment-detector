@@ -161,8 +161,9 @@ with tab1:
             st.caption("Tebakan Benar AI (244 Cyber & 244 Aman). "
                        "Angka 88 = Kebobolan (Bullying dikira Aman). Angka 70 = Salah Tuduh (Aman dikira Bullying).")
             
-            st.subheader("Isi Sampel Database Gabungan")
-            st.dataframe(df[['text', 'label']].sample(10, random_state=42), use_container_width=True)
+        
+        st.subheader("Isi Sampel Database Gabungan")
+        st.dataframe(df[['text', 'label']].sample(10, random_state=42), use_container_width=True)
             
         st.write("---")
         st.subheader("Peta Kosakata Dominan (WordCloud)")

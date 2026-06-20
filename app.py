@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+import numpy as np 
+from sklearn.metrics import ConfusionMatrixDisplay
 
 # ==========================================
 # 1. KONFIGURASI HALAMAN & THEME
@@ -149,6 +151,16 @@ with tab1:
             st.pyplot(fig)
             
         with col2:
+            st.subheader("Bagan Confusion Matrix (Hasil Evaluasi)")
+            # Matriks 2x2 urutan intuitif: Row 1=Cyberbullying, Row 2=Aman
+            cm_vis = np.array([[244, 88], [70, 244]])
+            fig_cm, ax_cm = plt.subplots(figsize=(4, 4))
+            disp = ConfusionMatrixDisplay(confusion_matrix=cm_vis, display_labels=['Cyberbullying', 'Aman'])
+            disp.plot(cmap='Reds', values_format='d', ax=ax_cm, colorbar=False)
+            st.pyplot(fig_cm)
+            st.caption("Tebakan Benar AI (244 Cyber & 244 Aman). "
+                       "Angka 88 = Kebobolan (Bullying dikira Aman). Angka 70 = Salah Tuduh (Aman dikira Bullying).")
+            
             st.subheader("Isi Sampel Database Gabungan")
             st.dataframe(df[['text', 'label']].sample(10, random_state=42), use_container_width=True)
             

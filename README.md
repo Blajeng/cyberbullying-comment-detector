@@ -17,7 +17,7 @@ Pertumbuhan pengguna media sosial seperti Instagram dan TikTok memicu lonjakan v
 Metode konvensional yang mengandalkan pencocokan kata kunci kaku (*keyword filtering*) sangat mudah dikelabuhi oleh pengguna. Pelaku perundungan sering kali memanipulasi ketikan menggunakan singkatan, bahasa gaul (slang), atau salah ketik yang disengaja (*typo*).
 
 Oleh karena itu, solusi berbasis **Artificial Intelligence (Natural Language Processing)** sangat relevan karena mampu:
-1. **Memahami Konteks Kalimat:** Algoritma NLP mempelajari pola kemunculan kata dan kombinasi kata yang berkorelasi dengan komentar cyberbullying berdasarkan data pelatihan, sehingga mampu melakukan klasifikasi secara lebih fleksibel dibanding pendekatan keyword filtering sederhana.
+1. **Mendeteksi Kata Negatif:** Algoritma NLP mempelajari pola kemunculan kata dan kombinasi kata yang berkorelasi dengan komentar cyberbullying berdasarkan data pelatihan, sehingga mampu melakukan klasifikasi secara lebih fleksibel dibanding pendekatan keyword filtering sederhana.
 2. **Skalabilitas Tinggi:** Model mampu melakukan prediksi data baru dalam hitungan milidetik, sehingga penyaringan konten dapat dilakukan secara otomatis sebelum dibaca oleh pengguna lain.
 
 ---
